@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6451E0F020A23D9800068D40 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451E0EF20A23D9800068D40 /* DetailViewController.swift */; };
+		6451E0F220A23F6C00068D40 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6451E0F120A23F6C00068D40 /* Extensions.swift */; };
 		645521A820A1EBFF00BFD74A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521A720A1EBFF00BFD74A /* AppDelegate.swift */; };
-		645521AA20A1EBFF00BFD74A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521A920A1EBFF00BFD74A /* ViewController.swift */; };
+		645521AA20A1EBFF00BFD74A /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521A920A1EBFF00BFD74A /* HeroesViewController.swift */; };
 		645521AD20A1EBFF00BFD74A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645521AB20A1EBFF00BFD74A /* Main.storyboard */; };
 		645521AF20A1EC0000BFD74A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645521AE20A1EC0000BFD74A /* Assets.xcassets */; };
 		645521B220A1EC0000BFD74A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 645521B020A1EC0000BFD74A /* LaunchScreen.storyboard */; };
 		645521BD20A1EC0000BFD74A /* marvel_heroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521BC20A1EC0000BFD74A /* marvel_heroesTests.swift */; };
 		645521C820A1EC0000BFD74A /* marvel_heroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521C720A1EC0000BFD74A /* marvel_heroesUITests.swift */; };
+		645521DB20A1F0D300BFD74A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521DA20A1F0D300BFD74A /* Hero.swift */; };
+		645521DD20A1F20000BFD74A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521DC20A1F20000BFD74A /* APIManager.swift */; };
+		645521E020A1F21600BFD74A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521DF20A1F21600BFD74A /* Constants.swift */; };
+		645521E620A1F45800BFD74A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645521E320A1F45800BFD74A /* Alamofire.framework */; };
+		645521E720A1F45800BFD74A /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645521E420A1F45800BFD74A /* SDWebImage.framework */; };
+		645521E820A1F45800BFD74A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645521E520A1F45800BFD74A /* SwiftyJSON.framework */; };
+		645521EA20A1F81200BFD74A /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521E920A1F81200BFD74A /* HeroesViewModel.swift */; };
+		645521EC20A1F81B00BFD74A /* HeroesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521EB20A1F81B00BFD74A /* HeroesTableView.swift */; };
+		645521EE20A1F90000BFD74A /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645521ED20A1F90000BFD74A /* HeroTableViewCell.swift */; };
+		645521F220A230C000BFD74A /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645521F120A230C000BFD74A /* CryptoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6451E0EF20A23D9800068D40 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6451E0F120A23F6C00068D40 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		645521A420A1EBFF00BFD74A /* marvel-heroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-heroes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645521A720A1EBFF00BFD74A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		645521A920A1EBFF00BFD74A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		645521A920A1EBFF00BFD74A /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 		645521AC20A1EBFF00BFD74A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		645521AE20A1EC0000BFD74A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		645521B120A1EC0000BFD74A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,16 @@
 		645521C320A1EC0000BFD74A /* marvel-heroesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-heroesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		645521C720A1EC0000BFD74A /* marvel_heroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_heroesUITests.swift; sourceTree = "<group>"; };
 		645521C920A1EC0000BFD74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645521DA20A1F0D300BFD74A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		645521DC20A1F20000BFD74A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		645521DF20A1F21600BFD74A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		645521E320A1F45800BFD74A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		645521E420A1F45800BFD74A /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		645521E520A1F45800BFD74A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		645521E920A1F81200BFD74A /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		645521EB20A1F81B00BFD74A /* HeroesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableView.swift; sourceTree = "<group>"; };
+		645521ED20A1F90000BFD74A /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		645521F120A230C000BFD74A /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645521F220A230C000BFD74A /* CryptoSwift.framework in Frameworks */,
+				645521E620A1F45800BFD74A /* Alamofire.framework in Frameworks */,
+				645521E720A1F45800BFD74A /* SDWebImage.framework in Frameworks */,
+				645521E820A1F45800BFD74A /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +109,7 @@
 				645521BB20A1EC0000BFD74A /* marvel-heroesTests */,
 				645521C620A1EC0000BFD74A /* marvel-heroesUITests */,
 				645521A520A1EBFF00BFD74A /* Products */,
+				645521E220A1F45800BFD74A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +126,13 @@
 		645521A620A1EBFF00BFD74A /* marvel-heroes */ = {
 			isa = PBXGroup;
 			children = (
+				645521DE20A1F20E00BFD74A /* Custom */,
+				645521D920A1F0CB00BFD74A /* Model */,
+				645521D820A1F08A00BFD74A /* ViewController */,
+				645521D720A1F08600BFD74A /* View */,
+				645521D620A1F07F00BFD74A /* ViewModel */,
+				645521D520A1F07A00BFD74A /* API */,
 				645521A720A1EBFF00BFD74A /* AppDelegate.swift */,
-				645521A920A1EBFF00BFD74A /* ViewController.swift */,
 				645521AB20A1EBFF00BFD74A /* Main.storyboard */,
 				645521AE20A1EC0000BFD74A /* Assets.xcassets */,
 				645521B020A1EC0000BFD74A /* LaunchScreen.storyboard */,
@@ -125,6 +159,68 @@
 			path = "marvel-heroesUITests";
 			sourceTree = "<group>";
 		};
+		645521D520A1F07A00BFD74A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				645521DC20A1F20000BFD74A /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		645521D620A1F07F00BFD74A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				645521E920A1F81200BFD74A /* HeroesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		645521D720A1F08600BFD74A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				645521EB20A1F81B00BFD74A /* HeroesTableView.swift */,
+				645521ED20A1F90000BFD74A /* HeroTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		645521D820A1F08A00BFD74A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				645521A920A1EBFF00BFD74A /* HeroesViewController.swift */,
+				6451E0EF20A23D9800068D40 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		645521D920A1F0CB00BFD74A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				645521DA20A1F0D300BFD74A /* Hero.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		645521DE20A1F20E00BFD74A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				645521DF20A1F21600BFD74A /* Constants.swift */,
+				6451E0F120A23F6C00068D40 /* Extensions.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		645521E220A1F45800BFD74A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				645521F120A230C000BFD74A /* CryptoSwift.framework */,
+				645521E320A1F45800BFD74A /* Alamofire.framework */,
+				645521E420A1F45800BFD74A /* SDWebImage.framework */,
+				645521E520A1F45800BFD74A /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +231,7 @@
 				645521A020A1EBFF00BFD74A /* Sources */,
 				645521A120A1EBFF00BFD74A /* Frameworks */,
 				645521A220A1EBFF00BFD74A /* Resources */,
+				645521E120A1F32000BFD74A /* Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +348,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		645521E120A1F32000BFD74A /* Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+			);
+			name = "Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		645521A020A1EBFF00BFD74A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645521AA20A1EBFF00BFD74A /* ViewController.swift in Sources */,
+				6451E0F020A23D9800068D40 /* DetailViewController.swift in Sources */,
+				645521E020A1F21600BFD74A /* Constants.swift in Sources */,
+				645521DD20A1F20000BFD74A /* APIManager.swift in Sources */,
+				645521AA20A1EBFF00BFD74A /* HeroesViewController.swift in Sources */,
+				645521EE20A1F90000BFD74A /* HeroTableViewCell.swift in Sources */,
+				6451E0F220A23F6C00068D40 /* Extensions.swift in Sources */,
 				645521A820A1EBFF00BFD74A /* AppDelegate.swift in Sources */,
+				645521EA20A1F81200BFD74A /* HeroesViewModel.swift in Sources */,
+				645521DB20A1F0D300BFD74A /* Hero.swift in Sources */,
+				645521EC20A1F81B00BFD74A /* HeroesTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +558,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "marvel-heroes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +580,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E7DGCG72AA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "marvel-heroes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
