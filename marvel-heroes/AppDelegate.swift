@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             /// Search bar appearance
             UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).font = font
-            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([.font: font.withSize(15)], for: .normal)
+            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes([.font: fontMedium.withSize(15)], for: .normal)
         }
     }
 }
