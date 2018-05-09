@@ -100,6 +100,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rp3-By-xoS">
                                 <rect key="frame" x="67" y="86" width="240" height="128"/>
+                                <accessibility key="accessibilityConfiguration" identifier="detailImageView"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="5gN-S9-3x8"/>
                                     <constraint firstAttribute="height" constant="128" id="usF-8e-9pH"/>
@@ -107,12 +108,14 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxx-vy-Ron">
                                 <rect key="frame" x="8" y="240" width="359" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="detailTitleLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB1-So-oK8">
                                 <rect key="frame" x="8" y="269" width="359" height="17"/>
+                                <accessibility key="accessibilityConfiguration" identifier="detailDescriptionLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
