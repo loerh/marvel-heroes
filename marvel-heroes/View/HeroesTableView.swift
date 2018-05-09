@@ -48,14 +48,8 @@ class HeroesTableView: UITableView {
     
     private func setupFooterView() {
         
-        let footerFrame = CGRect(x: 0, y: 0, width: frame.size.width, height: 40)
-        let footerView = UIView(frame: footerFrame)
-        
-        let activityIndicatorFrame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        let activityIndicator = UIActivityIndicatorView(frame: activityIndicatorFrame)
-        
-        footerView.addSubview(activityIndicator)
-        activityIndicator.center = footerView.center
+        let footerView = Bundle.main.loadNibNamed(TableViewFooterView.nibName, owner: self, options: nil)?.first as? TableViewFooterView
+        footerView?.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: 55)
         
         tableFooterView = footerView
     }

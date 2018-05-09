@@ -56,6 +56,14 @@ class APIManager {
             
             /// Extract results
             guard let results = json["data"]["results"].array else {
+                print("Could not find results key in JSON.")
+                completion(nil)
+                return
+            }
+            
+            /// Make sure we have at least 1 result
+            guard results.count > 0 else {
+                print("No more results found")
                 completion(nil)
                 return
             }

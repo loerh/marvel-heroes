@@ -28,6 +28,7 @@ class HeroesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        setupNavigationImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,11 +59,21 @@ class HeroesViewController: UIViewController {
             filter = searchText
         }
         
-        heroesViewModel.fetchHeroes(filter: filter) { (heroes) in
+        heroesViewModel.fetchHeroes(filterText: filter) { (heroes) in
             if let heroes = heroes {
                 self.heroesTableView?.setup(withHeroes: heroes, lastItemDelegate: self)
             }
         }
+    }
+    
+    //MARK: Setup
+    
+    private func setupNavigationImage() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        imageView.image = #imageLiteral(resourceName: "marvel_landscape")
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        navigationItem.titleView = imageView
     }
 }
 

@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UILabel.appearance().font = font
             
             /// Navigation bar
-            UINavigationBar.appearance().barTintColor = UIColor(hexString: "#ED1A29")
             UINavigationBar.appearance().tintColor = .white
             UINavigationBar.appearance().titleTextAttributes = [.font: fontMedium, .foregroundColor: UIColor.white]
             

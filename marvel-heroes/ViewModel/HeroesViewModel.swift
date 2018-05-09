@@ -32,16 +32,19 @@ class HeroesViewModel {
     
     /**
      Fetches heroes.
-     - parameter filter: The filter text applied in case of search.
+     - parameter filterText: The filter text applied in case of search.
      - parameter isCanceledSearch: If the search was just canceled.
      */
-    func fetchHeroes(filter: String? = nil,
+    func fetchHeroes(filterText: String? = nil,
                      canceledSearch isCanceledSearch: Bool = false,
                      completion: @escaping HeroesCompletion) {
         
         /// Reload existing popular movies if search was canceled
         if isCanceledSearch {
-            print("Search was canceled. Reloading data with existing popular movies.")
+            print("Search was canceled. Reloading data with existing heroes.")
+            searchHeroes.removeAll()
+            heroesOffsets[Constants.searchHeroesOffsetKey] = 0
+            searchFilter = nil
             completion(heroes)
             return
         }
@@ -51,28 +54,26 @@ class HeroesViewModel {
         var offsetKey = Constants.allHeroesOffsetKey
         var returnedHeroes = heroes
         
-        if let filter = filter {
+        if let filterText = filterText {
             
             /// Clean up search storage if search text (query) has changed
             if let searchFilter = searchFilter {
-                if searchFilter != filter {
+                if searchFilter != filterText {
                     print("Search filter has changed. Resetting pagination and results storage.")
                     searchHeroes.removeAll()
                     heroesOffsets[Constants.searchHeroesOffsetKey] = 0
                     completion(searchHeroes)
-                } else {
-                    print("Search keyword is the same as before. Reloading existing search data.")
-                    completion(searchHeroes)
-                    return
                 }
+            } else if filterText.count == 1 {
+                completion(searchHeroes)
             }
             
-            requestType = .search(filter)
+            requestType = .search(filterText)
             offsetKey = Constants.searchHeroesOffsetKey
             returnedHeroes = searchHeroes
         }
         
-        searchFilter = filter
+        searchFilter = filterText
         
         guard let offset = heroesOffsets[offsetKey] else {
             print("Could not find page for key \(offsetKey)")
@@ -86,18 +87,19 @@ class HeroesViewModel {
                 return
             }
             
-            /// Add new heroes to stored property
+            /// Add new heroes
             for hero in heroes {
                 returnedHeroes.append(hero)
             }
             
-            if filter == nil {
+            /// Assign returnedHeroes to the right stored property
+            if filterText == nil {
                 self.heroes = returnedHeroes
             } else {
                 self.searchHeroes = returnedHeroes
             }
             
-            print("Finished fetching heroes for offset \(offset) (\(filter == nil ? "All" : "Search"))")
+            print("Finished fetching heroes for offset \(offset) (\(filterText == nil ? "All" : "Search"))")
             self.heroesOffsets[offsetKey] = offset + self.limit
             completion(returnedHeroes)
         }
