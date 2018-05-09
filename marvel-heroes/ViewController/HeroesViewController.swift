@@ -30,6 +30,11 @@ class HeroesViewController: UIViewController {
         loadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Marvel's Heroes"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         super.prepare(for: segue, sender: self)
@@ -37,6 +42,7 @@ class HeroesViewController: UIViewController {
         if segue.identifier == "detail",
             let detailVC = segue.destination as? DetailViewController {
             detailVC.hero = heroesTableView?.selectedHero
+            title = ""
         }
     }
     

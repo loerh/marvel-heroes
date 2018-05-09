@@ -65,11 +65,11 @@ class MarvelHeroesUITests: XCTestCase {
         let detailTitleLabel = app.staticTexts["detailTitleLabel"]
         let detailDescriptionLabel = app.staticTexts["detailDescriptionLabel"]
         
-        let expectationImage = expectation(for: predicate, evaluatedWith: detailImageView, handler: nil)
-        let expectationTitle = expectation(for: predicate, evaluatedWith: detailTitleLabel, handler: nil)
-        let expectationDescription = expectation(for: predicate, evaluatedWith: detailDescriptionLabel, handler: nil)
-        
-        wait(for: [expectationImage, expectationTitle, expectationDescription], timeout: 10)
+        expectation(for: predicate, evaluatedWith: detailImageView, handler: nil)
+        expectation(for: predicate, evaluatedWith: detailTitleLabel, handler: nil)
+        expectation(for: predicate, evaluatedWith: detailDescriptionLabel, handler: nil)
+
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
     private func search(text: String, keepActive: Bool = false) {

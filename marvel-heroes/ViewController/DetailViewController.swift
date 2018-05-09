@@ -16,13 +16,26 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var heroDescriptionLabel: UILabel?
     
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint?
+    
     var hero: Hero?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageViewTopConstraint?.constant += UIScreen.main.bounds.size.height
+        view.layoutIfNeeded()
+        
         if let hero = hero {
             configureOutlets(with: hero)
+        }
+        
+        heroImageView?.layer.cornerRadius = 3
+        heroImageView?.clipsToBounds = true
+        
+        imageViewTopConstraint?.constant = 30
+        UIView.animate(withDuration: 0.6) {
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -30,6 +43,6 @@ class DetailViewController: UIViewController {
         title = hero.name
         heroImageView?.sd_setImage(with: URL(string: hero.imageURL), placeholderImage: #imageLiteral(resourceName: "no_image"))
         heroNameLabel?.text = hero.name
-        heroDescriptionLabel?.text = hero.heroDescription
+        heroDescriptionLabel?.text = hero.heroDescription.isEmpty ? "No hero description." : hero.heroDescription
     }
 }
